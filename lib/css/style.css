@@ -1,0 +1,109 @@
+/*****************
+    POUR TOUTES PAGES CONFONDUES
+********************/
+
+body{
+    /*Pour mettre le fond d'écran'*/
+    background: url(../../images/fond.jpg) no-repeat fixed center;
+    background-size: cover; 
+}
+header{
+    /*Pour espacer la bordure du haut de la page du menu*/
+    margin-top:1%;
+}
+/*Pour la taille du logo marvel*/
+#logo{
+    width:100%;
+}
+/*Pour le design des lens du menu*/
+.lienMenu{
+    background-color:black;
+    opacity: 0.75;
+    color:white;
+    text-align:center;
+    font-size: 1.4em;
+}
+/*Qd on survole un lien du menu*/
+.lienMenu:hover{
+    color:white;
+    background-color:#b30000;
+    text-decoration:none;
+}
+/*Qd on survole le dernier lien du menu, çàd se connecter ou s'inscrire"*/
+.lienMenu:last-child:hover{
+   background-color:white;
+text-decoration:none;
+}
+/*Pour les puces de la liste du dernier lien du menu*/
+#menu-log_in_out{
+    list-style-type: none;
+    color:#ff0000;
+    font-weight:bold;
+}
+/*Pour la couleur de "se connecter" ou "s'inscrire"*/
+.log_in_out{
+    color:#ff0000;
+}
+.log_in_out:hover{
+    
+    text-decoration: underline;
+}
+/*Pour changer la disposition du menu (plus simple de faire ainsi pour ensuite centrer les liens du menu)*/
+.vertical-align{
+    display: flex;
+    flex-direction: row;
+    
+}
+/*Pour centrer les élements du menu*/
+
+.vertical-align >[class^="col-"], .vertical-align >[class*=" col-"]{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+.vertical-align >[class^="col-"]> div, .vertical-align >[class*=" col-"] > div{
+    flex-grow: 1;
+    
+}
+#sectionPrincipal
+{
+    margin-top:0.5%;
+    background-color:#404040;
+    opacity:0.65;
+    color:white;
+}
+/*
+@media screen and (max-width: 480px) {
+    
+    .contenu{
+        color:red;
+    }
+
+   
+}
+/*gsm portrait*//*
+@media screen and (max-width: 475px) and (orientation: portrait) {
+   
+}
+
+    
+
+/*gsm landscape*//*
+@media screen and (max-width: 10000px) and (orientation: landscape) {
+    
+    
+}
+
+
+/*tablette portrait*//*
+@media screen and (min-width: 600px) and (orientation: portrait) {
+   
+}
+
+/*tablette landscape*//*
+@media screen and (min-width: 600px) and (orientation: landscape) {
+   
+   
+
+}*/
