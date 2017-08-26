@@ -1,11 +1,19 @@
 /*****************
     POUR TOUTES PAGES CONFONDUES
 ********************/
-
+h1{
+    color: #990000;
+    text-decoration: underline;
+    
+}
 body{
     /*Pour mettre le fond d'écran'*/
     background: url(../../images/fond.jpg) no-repeat fixed center;
     background-size: cover; 
+    
+}
+.eltParentHauteur, html, body{
+    height:100% !important;
 }
 header{
     /*Pour espacer la bordure du haut de la page du menu*/
@@ -48,6 +56,15 @@ text-decoration:none;
     
     text-decoration: underline;
 }
+.liInvisible{
+    display:none;
+}
+#lienCompte{
+    color:#ff8000;
+}
+#lienDeconnexion{
+    color:#8c8cd9;
+}
 /*Pour changer la disposition du menu (plus simple de faire ainsi pour ensuite centrer les liens du menu)*/
 .vertical-align{
     display: flex;
@@ -66,12 +83,68 @@ text-decoration:none;
     flex-grow: 1;
     
 }
+.modal-title-inscription{
+    color:orange;
+    text-align:center;
+    font-weight: bold;
+}
+#labelMdpWrong{
+    list-style-type: none;
+}
+.libelleError{
+    font-weight:bold;
+}
 #sectionPrincipal
 {
     margin-top:0.5%;
+    padding:3% 3%;
     background-color:#404040;
-    opacity:0.65;
+    opacity:0.95;
     color:white;
+    min-height:75%;
+    text-align: justify;
+    
+}
+.text-grey{
+    color:#d9d9d9;
+}
+
+.listeArticles{
+    list-style-type: none;
+    margin-bottom:15%;
+}
+.listeArticles :hover{
+    text-decoration: underline;
+}
+.titreArticle{
+    color:#cc0000;
+}
+.firstParaphArticle{
+    color:white;
+}
+.pagination>li>a,
+.pagination>li>span{
+    background-color:black;
+    border: 1px solid black;
+    color:white;
+    
+}
+.pagination>li>a:hover,
+.pagination>li>span:hover{
+    background-color:white;
+    border: 1px solid white;
+    color:black;
+}
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+    color: black;
+    cursor: default;
+    background-color: white;
+    border-color: white;
 }
 /*
 @media screen and (max-width: 480px) {
