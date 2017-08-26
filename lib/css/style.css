@@ -8,7 +8,7 @@ h1{
 }
 body{
     /*Pour mettre le fond d'écran'*/
-    background: url(../../images/fond.jpg) no-repeat fixed center;
+    background: url("../../images/fond.jpg") no-repeat fixed center;
     background-size: cover; 
     
 }

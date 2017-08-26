@@ -11,10 +11,10 @@ $req = $cnx->prepare('SELECT * FROM lire_debut_series()');
     foreach( $result as $row ){
             ?>
         <li class="listeArticles">
-            <a href="#"><h3 class="titreArticle text-center"><?php echo $row['nomserie'];?></h3></a>
+            <a href="#" class="lienArticle" data-type="series" data-id="<?php echo $row['idserie'];?>"><h3 class="titreArticle text-center"><?php echo $row['nomserie'];?></h3></a>
             
             
-            <a href="#" class="lienArticle" data-id="<?php echo $row['idserie'];?>">
+            <a href="#" class="lienArticle" data-type="series" data-id="<?php echo $row['idserie'];?>">
                 <img src="<?php echo $row['imgarticle'];?>" class="img-responsive center-block" style="width:50%;">
             </a>
         </li>
