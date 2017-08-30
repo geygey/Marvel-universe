@@ -3,14 +3,17 @@ session_start();
  include("fonctions_serveur.php");
    connexion($connexionUser);
    $res;
+   //Si on veut s'authentifier
    if($_POST['fonction']=='authentification')
  {
+       //On crypte le mdp
     $mdp_crypte=encrypt($_POST['mdp']); 
     $req = $connexionUser->prepare('SELECT * from lire_compte(?,?);');
     $req->bindParam(1, $_POST['login']);
     $req->bindParam(2, $mdp_crypte);
     $req->execute();
     $res = $req->fetch();
+    //Si on a réussi à trouver concordance, on affecte les $_SESSION
     if($res!=""){
         $_SESSION['login']=$res['n_login'];
         $_SESSION['logged']=true;
@@ -21,9 +24,10 @@ session_start();
         
     }
     
- }
+ }//ajouter un compte
  else if($_POST['fonction']=='ajout_compte')
  {
+     //On crypte le mdp puis on ajoute l'user
     $mdp_crypte=encrypt($_POST['mdp']);
     $req = $connexionUser->prepare('SELECT ajout_compte(?,?,?)');
     $req->bindParam(1, $_POST['login']);
@@ -32,6 +36,7 @@ session_start();
     $req->execute();
     $res=$req->fetch();
     echo $res['ajout_compte'];
+    //Si l'ajout a réussi, on affecte les $_SESSION
     if($res['ajout_compte']==1)
     {
         $_SESSION['login']=$_POST['login'];
@@ -40,6 +45,8 @@ session_start();
  }
  else if($_POST['fonction']=='modification_compte')
  {
+     //on crypte le mdp et on modifie le compte. Update est une variable qui va adapter l'update dans la bd selon 
+     //les champs remplis
     $mdp_crypte=encrypt($_POST['mdp']);
     $req = $connexionUser->prepare('SELECT modifie_compte(?,?,?,?)');
     $req->bindParam(1, $_POST['update']);
@@ -71,20 +78,6 @@ session_start();
       echo $row['email'].'***';
     }
     
- }
-   
-
- else if($_POST['fonction']=="load_comments"){
-     //SELECT * FROM lire_commentaires(1);
-   echo $_POST['id'];
-    $req = $connexionUser->prepare('SELECT * FROM lire_commentaires(?)');
-    $req->bindParam(1, $_POST['id']);
-    $result = $req->fetchAll();
-   print_r($result);
-   
-    foreach( $result as $row ){
-      echo $row['textecommentaire'];
-    }
  }
    
 ?>

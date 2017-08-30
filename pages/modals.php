@@ -1,11 +1,14 @@
+<!--Modal pour l'inscription-->
 <div class="modal fade" tabindex="-1" id="subscriptionModal" role="dialog" aria-labelledby="Ecran d'inscription">
     <div class="modal-dialog modal-sm">
     <!-- Modal content-->
         <div class="modal-content">
+            <!--Inscription-->
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title modal-title-inscription">Inscription</h4>
             </div>
+            <!--Formulaire-->
             <div class="modal-body">
                 <form>
                     <div class="form-group has-feedback">
@@ -42,6 +45,7 @@
                     <ul id="labelMdpWrong"></ul>
                 </form>
             </div>
+            <!--Bouton de confirmation-->
             <div class="modal-footer">
                 <div class="text-center">
                     <button type="submit" id="register_create" class="btnInscription btn btn-lg btn-warning"> S'inscrire</button>
@@ -51,7 +55,7 @@
 
     </div>
 </div>
-
+<!--Modal pour l'authentification-->
 <div class="modal fade" tabindex="-1" id="signUpModal" role="dialog" aria-labelledby="Ecran d'authentification">
     <div class="modal-dialog modal-sm">
     <!-- Modal content-->
@@ -60,6 +64,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title modal-title-inscription">Connexion</h4>
             </div>
+            <!--Formulaire-->
             <div class="modal-body">
                 <form>
                     <div class="form-group">
@@ -77,6 +82,7 @@
                 </form>
                                        
             </div>
+            <!--Bouton de confirmation-->
             <div class="modal-footer">
                 <div class="text-center">
                     <button type="submit" id="authentifier" class="btnInscription btn btn-lg btn-warning">Se connecter</button>
@@ -85,7 +91,7 @@
         </div>
     </div>
 </div>
-
+<!--Modal pour modifier son compte-->
 <div class="modal fade" tabindex="-1" id="modifyModal" role="dialog" aria-labelledby="Modification du compte">
     <div class="modal-dialog modal-sm">
     <!-- Modal content-->
@@ -94,6 +100,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title modal-title-inscription">Gestion de votre compte</h4>
             </div>
+            <!--Formulaire-->
             <div class="modal-body">
                 <form>
                     <div class="form-group">

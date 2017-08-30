@@ -6,7 +6,7 @@ h1{
     text-decoration: underline;
     
 }
-body{
+body{   
     /*Pour mettre le fond d'écran'*/
     background: url("../../images/fond.jpg") no-repeat fixed center;
     background-size: cover; 
@@ -14,7 +14,6 @@ body{
 }
 .eltParentHauteur, html, body{
     height:100% !important;
-    
 }
 header{
     /*Pour espacer la bordure du haut de la page du menu*/
@@ -57,12 +56,15 @@ text-decoration:none;
     
     text-decoration: underline;
 }
+/*classe pour cacher les liens se connecter, se déconnecter, gérer le compte, s'inscre'*/
 .liInvisible{
     display:none;
 }
+/*Couleur pour "gérer le compte"*/
 #lienCompte{
     color:#ff8000;
 }
+/*Couleur pour "se déconnecter"*/
 #lienDeconnexion{
     color:#8c8cd9;
 }
@@ -70,10 +72,8 @@ text-decoration:none;
 .vertical-align{
     display: flex;
     flex-direction: row;
-    
 }
 /*Pour centrer les élements du menu*/
-
 .vertical-align >[class^="col-"], .vertical-align >[class*=" col-"]{
     display:flex;
     align-items:center;
@@ -84,17 +84,21 @@ text-decoration:none;
     flex-grow: 1;
     
 }
+/*Pour les titres dans les modals*/
 .modal-title-inscription{
     color:orange;
     text-align:center;
     font-weight: bold;
 }
+/*Pour les libelles de footer de modals*/
 #labelMdpWrong, #labelModifWrong{
     list-style-type: none;
 }
+/*Classe pour les erreurs d'input dans les modals'*/
 .libelleError{
     font-weight:bold;
 }
+/*Section, bloc principal du texte*/
 #sectionPrincipal
 {
     margin-top:0.5%;
@@ -109,7 +113,7 @@ text-decoration:none;
 .text-grey{
     color:#d9d9d9;
 }
-
+/*liste à puces pour toutes les news, séries films (affichage restreint)*/
 .listeArticles{
     list-style-type: none;
     margin-bottom:15%;
@@ -117,10 +121,12 @@ text-decoration:none;
 .listeArticles :hover{
     text-decoration: underline;
 }
+/*Titre de l'article'*/
 .titreArticle{
     color:#cc0000;
     clear:both;
 }
+/*1er paragraphe visible de l'article dans news'*/
 .firstParaphArticle{
     color:white;
 }
@@ -157,37 +163,3 @@ text-decoration:none;
 #btn-PDF{
     margin-bottom:2%;
 }
-/*
-@media screen and (max-width: 480px) {
-    
-    .contenu{
-        color:red;
-    }
-
-   
-}
-/*gsm portrait*//*
-@media screen and (max-width: 475px) and (orientation: portrait) {
-   
-}
-
-    
-
-/*gsm landscape*//*
-@media screen and (max-width: 10000px) and (orientation: landscape) {
-    
-    
-}
-
-
-/*tablette portrait*//*
-@media screen and (min-width: 600px) and (orientation: portrait) {
-   
-}
-
-/*tablette landscape*//*
-@media screen and (min-width: 600px) and (orientation: landscape) {
-   
-   
-
-}*/

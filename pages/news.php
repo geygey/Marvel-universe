@@ -30,5 +30,4 @@ $req = $cnx->prepare('SELECT * FROM lire_debut_articles()');
 
     ?>
     </ul>
-<div class="page_navigation text-center"> </div>
 <script type="text/javascript" src="./lib/js/pagination.js"></script>

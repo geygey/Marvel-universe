@@ -1,5 +1,7 @@
+<!--Pour la pagination-->
 <div class="page_navigation text-center"> </div>
 <?php 
+//Appel à la BDD pour récupérer ttes les séries
 $req = $cnx->prepare('SELECT * FROM lire_debut_series()');
     $req->execute();
     $result = $req->fetchAll();
@@ -8,6 +10,7 @@ $req = $cnx->prepare('SELECT * FROM lire_debut_series()');
     
     <ul id="content-articles">
     <?php
+    //Boucle pour afficher les articles
     foreach( $result as $row ){
             ?>
         <li class="listeArticles">
@@ -23,5 +26,4 @@ $req = $cnx->prepare('SELECT * FROM lire_debut_series()');
 
     ?>
     </ul>
-<div class="page_navigation text-center"> </div>
 <script type="text/javascript" src="./lib/js/pagination.js"></script>

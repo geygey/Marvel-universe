@@ -1,5 +1,7 @@
+<!--Pour la pagination-->
 <div class="page_navigation text-center"> </div>
-<?php 
+<?php
+//Appel à la bd pour récupérer les films
 $req = $cnx->prepare('SELECT * FROM lire_debut_films()');
     $req->execute();
     $result = $req->fetchAll();
@@ -8,6 +10,7 @@ $req = $cnx->prepare('SELECT * FROM lire_debut_films()');
     
     <ul id="content-articles">
     <?php
+    //Bcl pour afficher les films
     foreach( $result as $row ){
             ?>
         <li class="listeArticles">
@@ -22,6 +25,5 @@ $req = $cnx->prepare('SELECT * FROM lire_debut_films()');
         }
 
     ?>
-    </ul>
-<div class="page_navigation text-center"> </div>
+    </ul><!--Pour la pagination-->
 <script type="text/javascript" src="./lib/js/pagination.js"></script>
