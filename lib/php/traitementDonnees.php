@@ -6,41 +6,24 @@ session_start();
    if($_POST['fonction']=='authentification')
  {
     $mdp_crypte=encrypt($_POST['mdp']); 
-//print_r($res);
     $req = $connexionUser->prepare('SELECT * from lire_compte(?,?);');
     $req->bindParam(1, $_POST['login']);
     $req->bindParam(2, $mdp_crypte);
     $req->execute();
     $res = $req->fetch();
-    //print_r($res);
     if($res!=""){
-        
-        $_SESSION['mdp']=$res['n_mdp'];
+        $_SESSION['login']=$res['n_login'];
         $_SESSION['logged']=true;
-        //echo $_SESSION['mdp'].'---'.$_SESSION['logged'];
         echo 1;
     }
     else{
         echo 0;
+        
     }
-    
-    //$result = $req->fetchAll();
-   /*
-    foreach( $result as $row ){
-      echo $row['login'].'***';
-    }*/
     
  }
  else if($_POST['fonction']=='ajout_compte')
  {
-   /*
-    $req = $connexionUser->prepare('INSERT INTO compte(login, motdepasse, email) VALUES(?,?,?)');
-    $req->bindParam(1, $_POST['login']);
-    $req->bindParam(2, $_POST['mdp']);
-    $req->bindParam(3, $_POST['email']);
-    $req->execute();
-    */
-   // $req = $connexionUser->prepare('INSERT INTO compte(login, motdepasse, email) VALUES(?,?,?)');
     $mdp_crypte=encrypt($_POST['mdp']);
     $req = $connexionUser->prepare('SELECT ajout_compte(?,?,?)');
     $req->bindParam(1, $_POST['login']);
@@ -49,6 +32,23 @@ session_start();
     $req->execute();
     $res=$req->fetch();
     echo $res['ajout_compte'];
+    if($res['ajout_compte']==1)
+    {
+        $_SESSION['login']=$_POST['login'];
+        $_SESSION['logged']=true;
+    }
+ }
+ else if($_POST['fonction']=='modification_compte')
+ {
+    $mdp_crypte=encrypt($_POST['mdp']);
+    $req = $connexionUser->prepare('SELECT modifie_compte(?,?,?,?)');
+    $req->bindParam(1, $_POST['update']);
+    $req->bindParam(2, $_SESSION['login']);
+    $req->bindParam(3, $mdp_crypte);
+    $req->bindParam(4, $_POST['mail']);
+    $req->execute();
+    $res=$req->fetch();
+    echo $res['modifie_compte'];
  }
   else if($_POST['fonction']=='recup_logins')
  {

@@ -69,7 +69,7 @@ $pdf->AddPage();
         $a_remplacer=array("<li>", "</li>", "<ul>", "</ul>");
         $remplacement=array("<br>", "","","");
         $texte=str_replace($a_remplacer, $remplacement, $film['texte']);
-        echo $texte;
+       
         $txt=$libelle_saut.$film['resume'].'<br><br>'.$texte;
         $result=$image.$txt;
     }

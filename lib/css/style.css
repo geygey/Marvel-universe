@@ -89,7 +89,7 @@ text-decoration:none;
     text-align:center;
     font-weight: bold;
 }
-#labelMdpWrong{
+#labelMdpWrong, #labelModifWrong{
     list-style-type: none;
 }
 .libelleError{

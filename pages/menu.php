@@ -28,7 +28,7 @@
                             <a href="#" class="log_in_out" id="lienInscription" data-toggle="modal" data-target="#subscriptionModal">S'inscrire</a>
                         </li>
                         <li class="liLogged liInvisible">
-                            <a href="#" id="lienCompte">Gérer le compte</a>
+                            <a href="#" id="lienCompte" data-toggle="modal" data-target="#modifyModal">Gérer le compte</a>
                         </li>
                         <li class="liLogged liInvisible">
                             <a href="index.php?page=news.php&deconnexion=true" id="lienDeconnexion">Se déconnecter</a>
@@ -44,7 +44,7 @@
                             <a href="#" class="log_in_out" id="lienInscription" data-toggle="modal" data-target="#subscriptionModal">S'inscrire</a>
                         </li>
                         <li class="liLogged">
-                            <a href="#" id="lienCompte">Gérer le compte</a>
+                            <a href="#" id="lienCompte" data-toggle="modal" data-target="#modifyModal">Gérer le compte</a>
                         </li>
                         <li class="liLogged">
                                 <a href="index.php?page=news.php&deconnexion=true" id="lienDeconnexion">Se déconnecter</a>

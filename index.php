@@ -96,10 +96,11 @@ session_start();
                         ?>
                     </div>
                 </div>
+            
+            
             <script type="text/javascript" src="./lib/js/responsive.js"></script>
             <script type="text/javascript" src="./lib/js/menu.js"></script>
             <script type="text/javascript" src="./lib/js/traitementDonnees.js"></script>
-            <script type="text/javascript" src="./lib/js/compte.js"></script>
             <script type="text/javascript" src="./lib/js/article.js"></script>
 	</body>
 </html>
