@@ -73,6 +73,7 @@ session_start();
             
                 
                                 <?php 
+                                
                                     include $page;
                     }
                     else{
@@ -82,7 +83,8 @@ session_start();
                     }
                 }
                 else{
-                            include("./pages/news.php");
+                    
+                    include("./pages/news.php");
                 }
                         ?>
                             </article>
@@ -94,7 +96,6 @@ session_start();
                         ?>
                     </div>
                 </div>
-		
             <script type="text/javascript" src="./lib/js/responsive.js"></script>
             <script type="text/javascript" src="./lib/js/menu.js"></script>
             <script type="text/javascript" src="./lib/js/traitementDonnees.js"></script>
